@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/controlls.js":
-/*!**************************!*\
-  !*** ./src/controlls.js ***!
-  \**************************/
+/***/ "./src/elementsHTML.js":
+/*!*****************************!*\
+  !*** ./src/elementsHTML.js ***!
+  \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Controller: () => (/* binding */ Controller)\n/* harmony export */ });\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && \"function\" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }, _typeof(obj); }\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\nfunction _toPropertyKey(arg) { var key = _toPrimitive(arg, \"string\"); return _typeof(key) === \"symbol\" ? key : String(key); }\nfunction _toPrimitive(input, hint) { if (_typeof(input) !== \"object\" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || \"default\"); if (_typeof(res) !== \"object\") return res; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (hint === \"string\" ? String : Number)(input); }\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n// Logica dos botoes de controle do Timer\n\nvar Controller = /*#__PURE__*/_createClass(function Controller() {\n  _classCallCheck(this, Controller);\n});\n\n//# sourceURL=webpack://impruvedfocustimer/./src/controlls.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   elementsHTML: () => (/* binding */ elementsHTML)\n/* harmony export */ });\nvar app = document.querySelector(\"#app\");\n\n// elements timer\nvar minutes = document.querySelector(\".timer #minutes\");\nvar seconds = document.querySelector(\".timer #seconds\");\n\n// elements mode\nvar modeBtn = document.querySelector(\"#modeBtn\");\nvar lightModeBtn = document.querySelector(\"#lightMode-Btn\");\nvar darkModeBtn = document.querySelector(\"#darkMode-Btn\");\nvar elementsHTML = {\n  app: app,\n  minutes: minutes,\n  seconds: seconds,\n  modeBtn: modeBtn,\n  lightModeBtn: lightModeBtn,\n  darkModeBtn: darkModeBtn\n};\n\n//# sourceURL=webpack://impruvedfocustimer/./src/elementsHTML.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/index.css */ \"./src/styles/index.css\");\n/* harmony import */ var _controlls_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./controlls.js */ \"./src/controlls.js\");\n\n\n\n//# sourceURL=webpack://impruvedfocustimer/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/index.css */ \"./src/styles/index.css\");\n/* harmony import */ var _elementsHTML_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./elementsHTML.js */ \"./src/elementsHTML.js\");\n\n\nvar modeBtn = _elementsHTML_js__WEBPACK_IMPORTED_MODULE_1__.elementsHTML.modeBtn,\n  lightModeBtn = _elementsHTML_js__WEBPACK_IMPORTED_MODULE_1__.elementsHTML.lightModeBtn,\n  darkModeBtn = _elementsHTML_js__WEBPACK_IMPORTED_MODULE_1__.elementsHTML.darkModeBtn;\nmodeBtn.addEventListener(\"click\", function () {\n  alert(\"ola\");\n});\n\n//# sourceURL=webpack://impruvedfocustimer/./src/index.js?");
 
 /***/ }),
 
