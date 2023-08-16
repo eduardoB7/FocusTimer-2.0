@@ -112,6 +112,8 @@
 :root {
   font-size: 62.5%;
 
+  --darkMode-ativeColor: #0a3442;
+
   --ligthMode-activeColorDefault: #02799d;
 
   --cards-backgrouColor-inative: #e1e1e6;
@@ -151,5 +153,18 @@ main {
 
 .darkMode {
   background-color: var(--darkmode-backColor);
+}
+
+@media (max-width: 820px) {
+  #app {
+    flex-direction: column;
+    position: relative;
+  }
+
+  #modeBtn {
+    position: absolute;
+    margin: 0 2rem 0 0;
+    right: 0;
+  }
 }
 
