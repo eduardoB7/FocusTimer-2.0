@@ -1,3 +1,7 @@
 import { elementsHTML } from "./elementsHTML.js";
 
-const { lightModeBtn, darkModeBtn } = elementsHTML;
+const { modeBtn, lightModeBtn, darkModeBtn } = elementsHTML;
+
+modeBtn.onclick = () => {
+  alert("Ola");
+};
