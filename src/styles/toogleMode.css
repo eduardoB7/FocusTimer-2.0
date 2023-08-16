@@ -4,6 +4,7 @@
   height: fit-content;
 }
 
-#modeBtn:hover #lightMode-Btn svg path {
+#modeBtn:hover #lightMode-Btn svg path,
+#modeBtn:hover #darkMode-Btn svg path {
   fill: var(--ligthMode-activeColorDefault);
 }
