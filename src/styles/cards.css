@@ -5,10 +5,7 @@
   gap: 3.2rem;
 }
 
-#florest-card,
-#rain-card,
-#coffe-card,
-#fire-card {
+.card {
   cursor: pointer;
   padding: 2.4rem;
   display: flex;
@@ -38,6 +35,27 @@
     width: 1.8rem;
     height: 1.8rem;
     background-color: var(--slidecolor-ligthMode);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+.slide-volume-darkMode {
+  cursor: pointer;
+  width: 9rem;
+  height: 0.4rem;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-color: var(--slidecolor-darkMode);
+  border-radius: 0.8rem;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: var(--slidecolor-darkMode);
     border-radius: 50%;
     cursor: pointer;
   }

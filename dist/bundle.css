@@ -49,10 +49,7 @@
   gap: 3.2rem;
 }
 
-#florest-card,
-#rain-card,
-#coffe-card,
-#fire-card {
+.card {
   cursor: pointer;
   padding: 2.4rem;
   display: flex;
@@ -87,11 +84,33 @@
   }
 }
 
+.slide-volume-darkMode {
+  cursor: pointer;
+  width: 9rem;
+  height: 0.4rem;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-color: var(--slidecolor-darkMode);
+  border-radius: 0.8rem;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: var(--slidecolor-darkMode);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/toogleMode.css ***!
   \*****************************************************************************/
 #modeBtn {
-  width: fit-content;
+  width: 4.4rem;
+  height: 4.4rem;
   cursor: pointer;
   height: fit-content;
 }
@@ -99,6 +118,26 @@
 #modeBtn:hover #lightMode-Btn svg path,
 #modeBtn:hover #darkMode-Btn svg path {
   fill: var(--ligthMode-activeColorDefault);
+}
+
+.darkmode-defaultColor {
+  color: var(--darkmode-defaultColor);
+}
+
+.darkmode-defaultColor-Btns svg path {
+  fill: var(--darkmode-defaultColor);
+}
+
+.darkmode-defaultColor-Cards {
+  background-color: var(--darkmode-CardsbgColor);
+}
+
+.darkmode-defaultColor-Cards-svg svg path {
+  fill: var(--darkmode-defaultColor);
+}
+
+.backgroundDark {
+  background-color: var(--darkmode-backgroundColor);
 }
 
 /*!************************************************************************!*\
@@ -113,17 +152,20 @@
 :root {
   font-size: 62.5%;
 
-  --darkMode-ativeColor: #0a3442;
-
   --ligthMode-activeColorDefault: #02799d;
 
   --cards-backgrouColor-inative: #e1e1e6;
 
   --fontColor-ligthMode: #323238;
 
-  --darkmode-backColor: #121214;
+  /* DarkMode colors */
+  --darkmode-backgroundColor: #121214;
+  --darkmode-defaultColor: #e1e1e6;
+  --darkMode-ativeColor: #0a3442;
+  --darkmode-CardsbgColor: #29292e;
 
   --slidecolor-ligthMode: #323238;
+  --slidecolor-darkMode: #e1e1e6;
 }
 
 body {

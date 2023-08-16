@@ -11,17 +11,20 @@
 :root {
   font-size: 62.5%;
 
-  --darkMode-ativeColor: #0a3442;
-
   --ligthMode-activeColorDefault: #02799d;
 
   --cards-backgrouColor-inative: #e1e1e6;
 
   --fontColor-ligthMode: #323238;
 
-  --darkmode-backColor: #121214;
+  /* DarkMode colors */
+  --darkmode-backgroundColor: #121214;
+  --darkmode-defaultColor: #e1e1e6;
+  --darkMode-ativeColor: #0a3442;
+  --darkmode-CardsbgColor: #29292e;
 
   --slidecolor-ligthMode: #323238;
+  --slidecolor-darkMode: #e1e1e6;
 }
 
 body {

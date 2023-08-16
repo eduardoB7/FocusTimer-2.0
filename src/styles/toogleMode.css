@@ -1,5 +1,6 @@
 #modeBtn {
-  width: fit-content;
+  width: 4.4rem;
+  height: 4.4rem;
   cursor: pointer;
   height: fit-content;
 }
@@ -7,4 +8,24 @@
 #modeBtn:hover #lightMode-Btn svg path,
 #modeBtn:hover #darkMode-Btn svg path {
   fill: var(--ligthMode-activeColorDefault);
+}
+
+.darkmode-defaultColor {
+  color: var(--darkmode-defaultColor);
+}
+
+.darkmode-defaultColor-Btns svg path {
+  fill: var(--darkmode-defaultColor);
+}
+
+.darkmode-defaultColor-Cards {
+  background-color: var(--darkmode-CardsbgColor);
+}
+
+.darkmode-defaultColor-Cards-svg svg path {
+  fill: var(--darkmode-defaultColor);
+}
+
+.backgroundDark {
+  background-color: var(--darkmode-backgroundColor);
 }
