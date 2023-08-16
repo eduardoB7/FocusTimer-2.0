@@ -1,5 +1,8 @@
 .Cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: fit-content;
+  gap: 3.2rem;
 }
 
 #florest-card,
@@ -7,10 +10,35 @@
 #coffe-card,
 #fire-card {
   cursor: pointer;
-  display: grid;
-  place-content: center;
-  width: 13.8rem;
+  padding: 2.4rem;
+  display: flex;
+  gap: 3.2rem;
   height: 15.2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   border-radius: 2.4rem;
   background-color: var(--cards-backgrouColor-inative);
+}
+
+.slide-volume {
+  cursor: pointer;
+  width: 9rem;
+  height: 0.4rem;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-color: var(--slidecolor-ligthMode);
+  border-radius: 0.8rem;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: var(--slidecolor-ligthMode);
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }

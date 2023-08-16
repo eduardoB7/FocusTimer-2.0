@@ -1,3 +1,13 @@
 .timer {
   display: flex;
+  color: var(--fontColor-ligthMode);
+  text-align: center;
+  font-size: 12.6166rem;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+#sectionTimer {
+  display: flex;
+  flex-direction: column;
 }

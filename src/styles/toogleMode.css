@@ -1,3 +1,9 @@
 #modeBtn {
+  width: fit-content;
   cursor: pointer;
+  height: fit-content;
+}
+
+#modeBtn:hover #lightMode-Btn svg path {
+  fill: var(--ligthMode-activeColorDefault);
 }

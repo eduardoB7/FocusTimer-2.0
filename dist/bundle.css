@@ -3,6 +3,16 @@
   \************************************************************************/
 .timer {
   display: flex;
+  color: var(--fontColor-ligthMode);
+  text-align: center;
+  font-size: 12.6166rem;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+#sectionTimer {
+  display: flex;
+  flex-direction: column;
 }
 
 /*!****************************************************************************!*\
@@ -21,11 +31,22 @@
   cursor: pointer;
 }
 
+#playBtn:hover svg path,
+#pauseBtn:hover svg path,
+#stopBtn:hover svg path,
+#addBtn:hover svg path,
+#subtractBtn:hover svg path {
+  fill: var(--ligthMode-activeColorDefault);
+}
+
 /*!************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/cards.css ***!
   \************************************************************************/
 .Cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: fit-content;
+  gap: 3.2rem;
 }
 
 #florest-card,
@@ -33,19 +54,50 @@
 #coffe-card,
 #fire-card {
   cursor: pointer;
-  display: grid;
-  place-content: center;
-  width: 13.8rem;
+  padding: 2.4rem;
+  display: flex;
+  gap: 3.2rem;
   height: 15.2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   border-radius: 2.4rem;
   background-color: var(--cards-backgrouColor-inative);
+}
+
+.slide-volume {
+  cursor: pointer;
+  width: 9rem;
+  height: 0.4rem;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-color: var(--slidecolor-ligthMode);
+  border-radius: 0.8rem;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: var(--slidecolor-ligthMode);
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }
 
 /*!*****************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/toogleMode.css ***!
   \*****************************************************************************/
 #modeBtn {
+  width: fit-content;
   cursor: pointer;
+  height: fit-content;
+}
+
+#modeBtn:hover #lightMode-Btn svg path {
+  fill: var(--ligthMode-activeColorDefault);
 }
 
 /*!************************************************************************!*\
@@ -60,18 +112,37 @@
 :root {
   font-size: 62.5%;
 
+  --ligthMode-activeColorDefault: #02799d;
+
   --cards-backgrouColor-inative: #e1e1e6;
 
+  --fontColor-ligthMode: #323238;
+
   --darkmode-backColor: #121214;
+
+  --slidecolor-ligthMode: #323238;
 }
 
 body {
   height: 100vh;
   font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
-  width: 100%;
+  position: relative;
+  display: flex;
+  padding: 6rem;
+  height: 100vh;
+  min-width: 90rem;
+}
+
+#app {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 19rem;
 }
 .hidden {
   display: none;

@@ -10,3 +10,11 @@
 #subtractBtn {
   cursor: pointer;
 }
+
+#playBtn:hover svg path,
+#pauseBtn:hover svg path,
+#stopBtn:hover svg path,
+#addBtn:hover svg path,
+#subtractBtn:hover svg path {
+  fill: var(--ligthMode-activeColorDefault);
+}
