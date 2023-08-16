@@ -132,9 +132,9 @@ body {
 main {
   position: relative;
   display: flex;
-  padding: 6rem;
   height: 100vh;
-  min-width: 90rem;
+  padding: 5rem;
+  width: 100%;
 }
 
 #app {
@@ -142,7 +142,8 @@ main {
   margin: auto;
   align-items: center;
   justify-content: center;
-  gap: 19rem;
+  justify-content: space-between;
+  width: 82rem;
 }
 .hidden {
   display: none;
