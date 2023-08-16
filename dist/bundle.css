@@ -1,8 +1,51 @@
 /*!************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/timer.css ***!
   \************************************************************************/
-#timer {
+.timer {
   display: flex;
+}
+
+/*!****************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/controlls.css ***!
+  \****************************************************************************/
+.Controlls {
+  display: flex;
+  gap: 4rem;
+}
+
+#playBtn,
+#pauseBtn,
+#stopBtn,
+#addBtn,
+#subtractBtn {
+  cursor: pointer;
+}
+
+/*!************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/cards.css ***!
+  \************************************************************************/
+.Cards {
+  width: fit-content;
+}
+
+#florest-card,
+#rain-card,
+#coffe-card,
+#fire-card {
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+  background-color: var(--cards-backgrouColor-inative);
+}
+
+/*!*****************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/toogleMode.css ***!
+  \*****************************************************************************/
+#modeBtn {
+  cursor: pointer;
 }
 
 /*!************************************************************************!*\
@@ -14,7 +57,27 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 62.5%;
+
+  --cards-backgrouColor-inative: #e1e1e6;
+
+  --darkmode-backColor: #121214;
+}
+
+body {
+  height: 100vh;
+  font-size: 1.6rem;
+}
+
+main {
+  width: 100%;
+}
 .hidden {
   display: none;
+}
+
+.darkMode {
+  background-color: var(--darkmode-backColor);
 }
 

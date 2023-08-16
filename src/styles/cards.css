@@ -1,0 +1,16 @@
+.Cards {
+  width: fit-content;
+}
+
+#florest-card,
+#rain-card,
+#coffe-card,
+#fire-card {
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+  background-color: var(--cards-backgrouColor-inative);
+}

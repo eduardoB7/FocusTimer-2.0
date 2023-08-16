@@ -1,0 +1,12 @@
+.Controlls {
+  display: flex;
+  gap: 4rem;
+}
+
+#playBtn,
+#pauseBtn,
+#stopBtn,
+#addBtn,
+#subtractBtn {
+  cursor: pointer;
+}
