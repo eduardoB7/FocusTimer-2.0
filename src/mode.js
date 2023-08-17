@@ -17,9 +17,11 @@ export class Mode {
     element.onclick = () => {
       lightModeBtn.classList.toggle("hidden");
       darkModeBtn.classList.toggle("hidden");
+      // ...
       main.classList.toggle("backgroundDark");
       minutes.classList.toggle("darkmode-defaultColor");
       seconds.classList.toggle("darkmode-defaultColor");
+      // ...
       allControllers.classList.toggle("darkmode-defaultColor-Btns");
       cardsGroup.forEach((card) => {
         card.classList.toggle("darkmode-defaultColor-Cards");
