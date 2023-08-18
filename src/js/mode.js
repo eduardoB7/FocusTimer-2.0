@@ -2,6 +2,7 @@ import { elementsHTML } from "./elementsHTML.js";
 
 const {
   main,
+  modeBtn,
   lightModeBtn,
   darkModeBtn,
   minutes,
@@ -13,8 +14,8 @@ const {
 
 // classe da logica do modo ligth/dark
 export class Mode {
-  constructor(element) {
-    element.onclick = () => {
+  constructor() {
+    modeBtn.onclick = () => {
       // logica do icone de ligth/dark
       lightModeBtn.classList.toggle("hidden");
       darkModeBtn.classList.toggle("hidden");

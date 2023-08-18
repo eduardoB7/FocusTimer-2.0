@@ -7,6 +7,7 @@ const seconds = document.querySelector(".timer #seconds");
 
 // elements controller timer
 const allControllers = document.querySelector(".Controlls");
+const playAndpause = document.querySelector("#playAndpause");
 const playBtn = document.querySelector("#playBtn");
 const pauseBtn = document.querySelector("#pauseBtn");
 const stopBtn = document.querySelector("#stopBtn");
@@ -25,12 +26,13 @@ export const elementsHTML = {
   app,
   minutes,
   seconds,
-  allControllers,
   modeBtn,
   lightModeBtn,
   darkModeBtn,
   cardsGroup,
   slideVolumeGroup,
+  allControllers,
+  playAndpause,
   playBtn,
   pauseBtn,
   stopBtn,
