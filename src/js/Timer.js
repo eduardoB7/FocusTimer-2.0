@@ -8,8 +8,18 @@ export class Controlls {
   constructor() {
     playAndpause.onclick = () => {
       playBtn.classList.toggle("hidden");
+      this.play();
       pauseBtn.classList.toggle("hidden");
     };
+  }
+
+  play() {
+    if (playBtn.classList.contains("hidden")) {
+      return console.log("contador play teste");
+    }
+    if (!playBtn.classList.contains("hidden")) {
+      return console.log("contador pause teste");
+    }
   }
 }
 
