@@ -7,8 +7,13 @@ const seconds = document.querySelector(".timer #seconds");
 
 // elements controller timer
 const allControllers = document.querySelector(".Controlls");
+const playBtn = document.querySelector("#playBtn");
+const pauseBtn = document.querySelector("#pauseBtn");
+const stopBtn = document.querySelector("#stopBtn");
+const addTimerBtn = document.querySelector("#addBtn");
+const subtractTimerBtn = document.querySelector("#subtractBtn");
 
-// elements mode
+// elements mode ligth/dark
 const modeBtn = document.querySelector("#modeBtn");
 const lightModeBtn = document.querySelector("#lightMode-Btn");
 const darkModeBtn = document.querySelector("#darkMode-Btn");
@@ -26,4 +31,9 @@ export const elementsHTML = {
   darkModeBtn,
   cardsGroup,
   slideVolumeGroup,
+  playBtn,
+  pauseBtn,
+  stopBtn,
+  addTimerBtn,
+  subtractTimerBtn,
 };
