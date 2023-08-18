@@ -1,11 +1,17 @@
 // Logica dos botoes de controle do Timer
 import { elementsHTML } from "./elementsHTML.js";
 
-const { playAndpause, playBtn, pauseBtn } = elementsHTML;
+const { playAndpause, playBtn, pauseBtn, stopBtn } = elementsHTML;
 
-// Logica dos botões play/pause
+// Logica dos controles do timer
 export class Controlls {
   constructor() {
+    this.playAndpause();
+    this.stop();
+  }
+
+  //   metodo que alterna o botao play/pause
+  playAndpause() {
     playAndpause.onclick = () => {
       playBtn.classList.toggle("hidden");
       this.play();
@@ -13,6 +19,7 @@ export class Controlls {
     };
   }
 
+  //   metodo que da play no timer
   play() {
     if (playBtn.classList.contains("hidden")) {
       return console.log("contador play teste");
@@ -20,6 +27,19 @@ export class Controlls {
     if (!playBtn.classList.contains("hidden")) {
       return console.log("contador pause teste");
     }
+  }
+
+  //   metodos que aciona o stop do timer
+  stop() {
+    stopBtn.onclick = () => {
+      if (!playBtn.classList.contains("hidden")) {
+        console.log("stop clicado");
+      } else {
+        playBtn.classList.remove("hidden");
+        pauseBtn.classList.add("hidden");
+        console.log("timer resetado");
+      }
+    };
   }
 }
 
