@@ -3,8 +3,13 @@ import { elementsHTML } from "./elementsHTML.js";
 
 const { playAndpause, playBtn, pauseBtn, stopBtn } = elementsHTML;
 
+// logic
+export class Timer {
+  constructor() {}
+}
+
 // Logica dos controles do timer
-export class Controlls {
+export class Controlls extends Timer {
   constructor() {
     this.playAndpause();
     this.stop();
@@ -29,7 +34,7 @@ export class Controlls {
     }
   }
 
-  //   metodos que aciona o stop do timer
+  //   metodo que aciona o stop do timer
   stop() {
     stopBtn.onclick = () => {
       if (!playBtn.classList.contains("hidden")) {
@@ -43,8 +48,4 @@ export class Controlls {
   }
 }
 
-export class Timer extends Controlls {
-  constructor() {
-    super();
-  }
-}
+// logica do timer
