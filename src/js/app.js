@@ -4,7 +4,7 @@ import { Mode } from "./Mode.js";
 import { Controlls } from "./Timer.js";
 export class App {
   constructor() {
-    new Mode();
     new Controlls();
+    new Mode();
   }
 }
