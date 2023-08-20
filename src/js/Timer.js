@@ -1,6 +1,6 @@
 // Logica dos botoes de controle do Timer
 import { elementsHTML } from "./elementsHTML.js";
-import { SoundsBtnPress } from "./Sounds.js";
+import { SoundsBtnPress, SoundFinishTimer } from "./Sounds.js";
 // Elementos necessarios no controle/timer
 const {
   playAndpause,
@@ -32,6 +32,7 @@ export class Timer {
       minutes.textContent = String(minutesCount).padStart(2, "0");
 
       if (minutesCount === 0 && secondsCount < 0) {
+        SoundFinishTimer();
         this.stopCountDown();
       }
     }, 1000);

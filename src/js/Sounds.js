@@ -5,3 +5,8 @@ export function SoundsBtnPress() {
   const BtnSound = new Audio("./sounds/button-press.wav");
   return BtnSound.play();
 }
+
+export function SoundFinishTimer() {
+  const finishSound = new Audio("./sounds/kichen-timer.mp3");
+  return finishSound.play();
+}
