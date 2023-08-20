@@ -83,6 +83,26 @@
     cursor: pointer;
   }
 }
+.slide-volume-ligthModeActive {
+  cursor: pointer;
+  width: 9rem;
+  height: 0.4rem;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-color: white;
+  border-radius: 0.8rem;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
 
 .slide-volume-darkMode {
   cursor: pointer;
@@ -120,6 +140,16 @@
   fill: var(--ligthMode-activeColorDefault);
 }
 
+/* Classes ligth mode */
+
+.ligthMode-cardActive {
+  background-color: var(--ligthMode-activeColorDefault);
+}
+.ligthMode-cardActive svg path {
+  fill: white;
+}
+
+/* Classes dark mode */
 .darkmode-defaultColor {
   color: var(--darkmode-defaultColor);
 }

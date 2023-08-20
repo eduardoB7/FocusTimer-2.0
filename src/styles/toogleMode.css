@@ -10,6 +10,16 @@
   fill: var(--ligthMode-activeColorDefault);
 }
 
+/* Classes ligth mode */
+
+.ligthMode-cardActive {
+  background-color: var(--ligthMode-activeColorDefault);
+}
+.ligthMode-cardActive svg path {
+  fill: white;
+}
+
+/* Classes dark mode */
 .darkmode-defaultColor {
   color: var(--darkmode-defaultColor);
 }

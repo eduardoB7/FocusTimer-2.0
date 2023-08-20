@@ -28,6 +28,16 @@ export class Cards extends CardsSounds {
     this.slideVolumeControll();
   }
 
+  // controle de versao de modo ligth/dark
+  cardsModeControll() {
+    cardsGroup.forEach((card) => {
+      card.classList.remove("ligthMode-cardActive");
+    });
+    slideVolume.forEach((slide) => {
+      slide.classList.remove("slide-volume-ligthModeActive");
+    });
+  }
+
   // logica dos slides
 
   // logica que impede que o clicar dos slides ativem o card
@@ -54,12 +64,14 @@ export class Cards extends CardsSounds {
     });
   }
 
+  // valor inicial dos slides
   slideGroup() {
     slideVolume.forEach((slide) => {
       slide.value = "0";
     });
   }
 
+  // valor padrao dos slides
   slideVolume(slide, card) {
     if (card.classList.contains("playSound")) {
       slide.value = "50";
@@ -80,10 +92,14 @@ export class Cards extends CardsSounds {
         florestCard.classList.remove("playSound");
         this.allCardsPause();
         this.slideGroup();
+        this.cardsModeControll();
       } else {
         this.playSound();
         florestCard.classList.add("playSound");
         if (florestCard.classList.contains("playSound")) {
+          this.cardsModeControll();
+          florestCard.classList.add("ligthMode-cardActive");
+          florestSlide.classList.add("slide-volume-ligthModeActive");
           this.slideGroup();
           this.slideVolume(florestSlide, florestCard);
           this.allCardsPause();
@@ -100,10 +116,14 @@ export class Cards extends CardsSounds {
         rainCard.classList.remove("playSound");
         this.allCardsPause();
         this.slideGroup();
+        this.cardsModeControll();
       } else {
         this.playSound();
         rainCard.classList.add("playSound");
         if (rainCard.classList.contains("playSound")) {
+          this.cardsModeControll();
+          rainCard.classList.add("ligthMode-cardActive");
+          rainSlide.classList.add("slide-volume-ligthModeActive");
           this.allCardsPause();
           this.slideGroup();
           this.slideVolume(rainSlide, rainCard);
@@ -120,10 +140,14 @@ export class Cards extends CardsSounds {
         coffeCard.classList.remove("playSound");
         this.allCardsPause();
         this.slideGroup();
+        this.cardsModeControll();
       } else {
         this.playSound();
         coffeCard.classList.add("playSound");
         if (coffeCard.classList.contains("playSound")) {
+          this.cardsModeControll();
+          coffeCard.classList.add("ligthMode-cardActive");
+          coffeSlide.classList.add("slide-volume-ligthModeActive");
           this.allCardsPause();
           this.slideGroup();
           this.slideVolume(coffeSlide, coffeCard);
@@ -140,13 +164,17 @@ export class Cards extends CardsSounds {
         fireCard.classList.remove("playSound");
         this.allCardsPause();
         this.slideGroup();
+        this.cardsModeControll();
       } else {
         this.playSound();
         fireCard.classList.add("playSound");
         if (fireCard.classList.contains("playSound")) {
+          this.cardsModeControll();
+          fireCard.classList.add("ligthMode-cardActive");
+          fireSlide.classList.add("slide-volume-ligthModeActive");
+          this.allCardsPause();
           this.slideGroup();
           this.slideVolume(fireSlide, fireCard);
-          this.allCardsPause();
           this.fireCardSounds();
         }
       }
