@@ -21,6 +21,17 @@ const darkModeBtn = document.querySelector("#darkMode-Btn");
 const cardsGroup = document.querySelectorAll(".card");
 const slideVolumeGroup = document.querySelectorAll(".slide-volume");
 
+// Cards Elements
+const florestCard = document.querySelector("#florest-card");
+const rainCard = document.querySelector("#rain-card");
+const coffeCard = document.querySelector("#coffe-card");
+const fireCard = document.querySelector("#fire-card");
+const slideVolume = document.querySelectorAll(".slide-volume");
+const florestSlide = document.querySelector("#florest-card-sound");
+const rainSlide = document.querySelector("#rain-card-sound");
+const coffeSlide = document.querySelector("#coffe-card-sound");
+const fireSlide = document.querySelector("#fire-card-sound");
+
 export const elementsHTML = {
   main,
   app,
@@ -38,4 +49,13 @@ export const elementsHTML = {
   stopBtn,
   addTimerBtn,
   subtractTimerBtn,
+  florestCard,
+  rainCard,
+  coffeCard,
+  fireCard,
+  slideVolume,
+  florestSlide,
+  rainSlide,
+  coffeSlide,
+  fireSlide,
 };
