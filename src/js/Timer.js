@@ -1,6 +1,6 @@
 // Logica dos botoes de controle do Timer
 import { elementsHTML } from "./elementsHTML.js";
-
+import { SoundsBtnPress } from "./Sounds.js";
 // Elementos necessarios no controle/timer
 const {
   playAndpause,
@@ -100,6 +100,7 @@ export class Controlls extends Timer {
     playBtn.onclick = () => {
       if (minutesCount >= 0 && secondsCount >= 0) {
         this.countdown();
+        SoundsBtnPress();
       }
     };
   }
@@ -108,6 +109,7 @@ export class Controlls extends Timer {
   pause() {
     pauseBtn.onclick = () => {
       this.pauseCountDown();
+      SoundsBtnPress();
     };
   }
 
@@ -115,8 +117,7 @@ export class Controlls extends Timer {
   stop() {
     stopBtn.onclick = () => {
       this.stopCountDown();
-      playBtn.classList.remove("hidden");
-      pauseBtn.classList.add("hidden");
+      SoundsBtnPress();
     };
   }
 
