@@ -24,14 +24,42 @@ export class Cards extends CardsSounds {
     this.rainCardBtn();
     this.coffeCardBtn();
     this.fireCardBtn();
+    this.slideEventControll();
+    this.slideVolumeControll();
   }
 
   // logica dos slides
+
+  // logica que impede que o clicar dos slides ativem o card
+  slideEventControll() {
+    slideVolume.forEach((slide) => {
+      slide.onclick = (ev) => {
+        ev.stopPropagation();
+      };
+    });
+  }
+
+  // Controle de volume
+  slideVolumeControll() {
+    slideVolume.forEach((slide) => {
+      slide.addEventListener("input", (ev) => {
+        let volumeValue = ev.currentTarget.value;
+        ev.value = volumeValue;
+
+        this.setVolume(volumeValue, this.CardflorestSound);
+        this.setVolume(volumeValue, this.CardRainSound);
+        this.setVolume(volumeValue, this.CardCoffeSound);
+        this.setVolume(volumeValue, this.CardFireSound);
+      });
+    });
+  }
+
   slideGroup() {
     slideVolume.forEach((slide) => {
       slide.value = "0";
     });
   }
+
   slideVolume(slide, card) {
     if (card.classList.contains("playSound")) {
       slide.value = "50";

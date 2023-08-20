@@ -50,7 +50,7 @@ export class CardsSounds {
     this.CardFireSound.currentTime = 0;
   }
 
-  setVolume(slide, volume, card) {
-    card.volume = volume;
+  setVolume(volume, card) {
+    card.volume = Number(volume) / 100;
   }
 }
