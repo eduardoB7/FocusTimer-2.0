@@ -1,5 +1,6 @@
 import { elementsHTML } from "./elementsHTML.js";
 
+// Elementos necessarios
 const {
   main,
   modeBtn,
@@ -24,6 +25,9 @@ export class Mode {
       main.classList.toggle("backgroundDark");
       minutes.classList.toggle("darkmode-defaultColor");
       seconds.classList.toggle("darkmode-defaultColor");
+      document
+        .querySelector(".timer span")
+        .classList.toggle("darkmode-defaultColor");
 
       // logica da versao dark mode dos icones dos controles do timer
       allControllers.classList.toggle("darkmode-defaultColor-Btns");

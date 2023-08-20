@@ -13,6 +13,7 @@ const {
   seconds,
 } = elementsHTML;
 let minutesCount = parseFloat(minutes.textContent);
+let secondsCount = parseFloat(seconds.textContent);
 
 // Logica das funcionalidades do timer
 export class Timer {
@@ -20,15 +21,19 @@ export class Timer {
 
   // metodo do contador
   countdown() {
-    let secondsCount = parseFloat(seconds.textContent);
     this.timerOut = setInterval(() => {
       secondsCount--;
-      if (secondsCount < 0) {
+      if (secondsCount < 0 && minutesCount > 0) {
         secondsCount = 59;
         minutesCount--;
       }
+
       seconds.textContent = String(secondsCount).padStart(2, "0");
       minutes.textContent = String(minutesCount).padStart(2, "0");
+
+      if (minutesCount === 0 && secondsCount < 0) {
+        this.stopCountDown();
+      }
     }, 1000);
   }
 
@@ -47,6 +52,26 @@ export class Timer {
   resetCountdown() {
     seconds.textContent = "00";
     minutes.textContent = "25";
+    minutesCount = parseFloat(minutes.textContent);
+    secondsCount = parseFloat(seconds.textContent);
+    playBtn.classList.remove("hidden");
+    pauseBtn.classList.add("hidden");
+  }
+
+  // Método que contem a logica de adicionar mais 5min no timer
+  addCountdown() {
+    let addMinute = (minutesCount += 5);
+    minutes.textContent = String(addMinute).padStart(2, "0");
+  }
+
+  // Método que contem a logica de remover mais 5min no timer (Se possivel)
+  removeCountdown() {
+    if (minutesCount >= 5) {
+      let removeMinute = (minutesCount -= 5);
+      if (removeMinute >= 0) {
+        minutes.textContent = String(removeMinute).padStart(2, "0");
+      }
+    }
   }
 }
 
@@ -58,9 +83,11 @@ export class Controlls extends Timer {
     this.play();
     this.pause();
     this.stop();
+    this.addTimer();
+    this.removeTimer();
   }
 
-  //   metodo que alterna o botao play/pause
+  //   Método que alterna o botao play/pause
   playAndpause() {
     playAndpause.onclick = () => {
       playBtn.classList.toggle("hidden");
@@ -68,27 +95,42 @@ export class Controlls extends Timer {
     };
   }
 
-  //   metodo que da play no timer
+  //   Método que aciona play no timer
   play() {
     playBtn.onclick = () => {
-      this.countdown();
+      if (minutesCount >= 0 && secondsCount >= 0) {
+        this.countdown();
+      }
     };
   }
 
+  // Método que aciona o pause o timer
   pause() {
     pauseBtn.onclick = () => {
       this.pauseCountDown();
     };
   }
 
-  //   metodos que aciona o stop do timer
+  //   Método que aciona o stop do timer
   stop() {
     stopBtn.onclick = () => {
-      if (playBtn.classList.contains("hidden")) {
-        this.stopCountDown();
-        playBtn.classList.remove("hidden");
-        pauseBtn.classList.add("hidden");
-      }
+      this.stopCountDown();
+      playBtn.classList.remove("hidden");
+      pauseBtn.classList.add("hidden");
+    };
+  }
+
+  // Método que aciona o botao de add mais 5 minutos ao timer
+  addTimer() {
+    addTimerBtn.onclick = () => {
+      this.addCountdown();
+    };
+  }
+
+  // Método que aciona o botao que remove 5 minutos do timer(se possivel)
+  removeTimer() {
+    subtractTimerBtn.onclick = () => {
+      this.removeCountdown();
     };
   }
 }
