@@ -1,5 +1,4 @@
 import { elementsHTML } from "./elementsHTML.js";
-
 // Elementos necessarios
 const {
   main,

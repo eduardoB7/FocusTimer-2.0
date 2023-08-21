@@ -4,6 +4,7 @@ import { elementsHTML } from "./elementsHTML.js";
 
 // elementos necessarios para as funcionalidades dos cards
 const {
+  modeBtn,
   cardsGroup,
   florestCard,
   rainCard,
@@ -14,6 +15,7 @@ const {
   rainSlide,
   coffeSlide,
   fireSlide,
+  lightModeBtn,
 } = elementsHTML;
 
 // Classe que contem as funcionalidades dos cards
@@ -32,6 +34,10 @@ export class Cards extends CardsSounds {
   cardsModeControll() {
     cardsGroup.forEach((card) => {
       card.classList.remove("ligthMode-cardActive");
+      card.classList.remove("darkMode-cardActive");
+      if (card.classList.contains("playSound")) {
+        card.classList.add("ligthMode-cardActive");
+      }
     });
     slideVolume.forEach((slide) => {
       slide.classList.remove("slide-volume-ligthModeActive");
@@ -65,7 +71,7 @@ export class Cards extends CardsSounds {
   }
 
   // valor inicial dos slides
-  slideGroup() {
+  slideResetValue() {
     slideVolume.forEach((slide) => {
       slide.value = "0";
     });
@@ -91,16 +97,15 @@ export class Cards extends CardsSounds {
       if (florestCard.classList.contains("playSound")) {
         florestCard.classList.remove("playSound");
         this.allCardsPause();
-        this.slideGroup();
+        this.slideResetValue();
         this.cardsModeControll();
       } else {
         this.playSound();
         florestCard.classList.add("playSound");
         if (florestCard.classList.contains("playSound")) {
           this.cardsModeControll();
-          florestCard.classList.add("ligthMode-cardActive");
           florestSlide.classList.add("slide-volume-ligthModeActive");
-          this.slideGroup();
+          this.slideResetValue();
           this.slideVolume(florestSlide, florestCard);
           this.allCardsPause();
           this.florestCardSounds();
@@ -115,17 +120,16 @@ export class Cards extends CardsSounds {
       if (rainCard.classList.contains("playSound")) {
         rainCard.classList.remove("playSound");
         this.allCardsPause();
-        this.slideGroup();
+        this.slideResetValue();
         this.cardsModeControll();
       } else {
         this.playSound();
         rainCard.classList.add("playSound");
         if (rainCard.classList.contains("playSound")) {
           this.cardsModeControll();
-          rainCard.classList.add("ligthMode-cardActive");
           rainSlide.classList.add("slide-volume-ligthModeActive");
           this.allCardsPause();
-          this.slideGroup();
+          this.slideResetValue();
           this.slideVolume(rainSlide, rainCard);
           this.rainCardSounds();
         }
@@ -139,17 +143,16 @@ export class Cards extends CardsSounds {
       if (coffeCard.classList.contains("playSound")) {
         coffeCard.classList.remove("playSound");
         this.allCardsPause();
-        this.slideGroup();
+        this.slideResetValue();
         this.cardsModeControll();
       } else {
         this.playSound();
         coffeCard.classList.add("playSound");
         if (coffeCard.classList.contains("playSound")) {
           this.cardsModeControll();
-          coffeCard.classList.add("ligthMode-cardActive");
           coffeSlide.classList.add("slide-volume-ligthModeActive");
           this.allCardsPause();
-          this.slideGroup();
+          this.slideResetValue();
           this.slideVolume(coffeSlide, coffeCard);
           this.coffeCardSounds();
         }
@@ -163,17 +166,16 @@ export class Cards extends CardsSounds {
       if (fireCard.classList.contains("playSound")) {
         fireCard.classList.remove("playSound");
         this.allCardsPause();
-        this.slideGroup();
+        this.slideResetValue();
         this.cardsModeControll();
       } else {
         this.playSound();
         fireCard.classList.add("playSound");
         if (fireCard.classList.contains("playSound")) {
           this.cardsModeControll();
-          fireCard.classList.add("ligthMode-cardActive");
           fireSlide.classList.add("slide-volume-ligthModeActive");
           this.allCardsPause();
-          this.slideGroup();
+          this.slideResetValue();
           this.slideVolume(fireSlide, fireCard);
           this.fireCardSounds();
         }

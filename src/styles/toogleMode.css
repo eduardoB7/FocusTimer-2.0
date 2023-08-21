@@ -24,6 +24,9 @@
   color: var(--darkmode-defaultColor);
 }
 
+.darkMode-cardActive {
+  background-color: var(--darkMode-ativeColor);
+}
 .darkmode-defaultColor-Btns svg path {
   fill: var(--darkmode-defaultColor);
 }

@@ -22,20 +22,24 @@ export class CardsSounds {
 
   florestCardSounds() {
     this.CardflorestSound.loop = true;
+    this.CardflorestSound.volume = 0.5;
     this.CardflorestSound.play();
   }
 
   rainCardSounds() {
     this.CardRainSound.loop = true;
+    this.CardRainSound.volume = 0.5;
     this.CardRainSound.play();
   }
 
   coffeCardSounds() {
     this.CardCoffeSound.loop = true;
+    this.CardCoffeSound.volume = 0.5;
     this.CardCoffeSound.play();
   }
   fireCardSounds() {
     this.CardFireSound.loop = true;
+    this.CardFireSound.volume = 0.5;
     this.CardFireSound.play();
   }
 
