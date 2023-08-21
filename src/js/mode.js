@@ -33,7 +33,15 @@ export class Mode {
 
       // logica da versao dark mode dos cards(backgroud e icones)
       cardsGroup.forEach((card) => {
-        card.classList.toggle("darkmode-defaultColor-Cards");
+        if (lightModeBtn.classList.contains("hidden")) {
+          card.classList.add("darkmode-defaultColor-Cards");
+        } else {
+          card.classList.remove("darkmode-defaultColor-Cards");
+        }
+
+        if (card.classList.contains("playSound")) {
+          card.classList.remove("darkmode-defaultColor-Cards");
+        }
         card.classList.toggle("darkmode-defaultColor-Cards-svg");
       });
 

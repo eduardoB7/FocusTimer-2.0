@@ -4,7 +4,6 @@ import { elementsHTML } from "./elementsHTML.js";
 
 // elementos necessarios para as funcionalidades dos cards
 const {
-  modeBtn,
   cardsGroup,
   florestCard,
   rainCard,
@@ -34,9 +33,15 @@ export class Cards extends CardsSounds {
   cardsModeControll() {
     cardsGroup.forEach((card) => {
       card.classList.remove("ligthMode-cardActive");
-      card.classList.remove("darkMode-cardActive");
       if (card.classList.contains("playSound")) {
         card.classList.add("ligthMode-cardActive");
+        card.classList.remove("darkmode-defaultColor-Cards");
+      }
+      if (
+        !card.classList.contains("playSound") &&
+        lightModeBtn.classList.contains("hidden")
+      ) {
+        card.classList.add("darkmode-defaultColor-Cards");
       }
     });
     slideVolume.forEach((slide) => {
