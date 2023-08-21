@@ -90,7 +90,7 @@ export class Cards extends CardsSounds {
   }
 
   // remove de todos os cards a classe que controla o som
-  playSound() {
+  playSoundRemove() {
     cardsGroup.forEach((card) => {
       card.classList.remove("playSound");
     });
@@ -105,12 +105,11 @@ export class Cards extends CardsSounds {
         this.slideResetValue();
         this.cardsModeControll();
       } else {
-        this.playSound();
+        this.playSoundRemove();
         florestCard.classList.add("playSound");
         if (florestCard.classList.contains("playSound")) {
           this.cardsModeControll();
           florestSlide.classList.add("slide-volume-ligthModeActive");
-          this.slideResetValue();
           this.slideVolume(florestSlide, florestCard);
           this.allCardsPause();
           this.florestCardSounds();
@@ -128,13 +127,12 @@ export class Cards extends CardsSounds {
         this.slideResetValue();
         this.cardsModeControll();
       } else {
-        this.playSound();
+        this.playSoundRemove();
         rainCard.classList.add("playSound");
         if (rainCard.classList.contains("playSound")) {
           this.cardsModeControll();
           rainSlide.classList.add("slide-volume-ligthModeActive");
           this.allCardsPause();
-          this.slideResetValue();
           this.slideVolume(rainSlide, rainCard);
           this.rainCardSounds();
         }
@@ -151,13 +149,12 @@ export class Cards extends CardsSounds {
         this.slideResetValue();
         this.cardsModeControll();
       } else {
-        this.playSound();
+        this.playSoundRemove();
         coffeCard.classList.add("playSound");
         if (coffeCard.classList.contains("playSound")) {
           this.cardsModeControll();
           coffeSlide.classList.add("slide-volume-ligthModeActive");
           this.allCardsPause();
-          this.slideResetValue();
           this.slideVolume(coffeSlide, coffeCard);
           this.coffeCardSounds();
         }
@@ -174,13 +171,12 @@ export class Cards extends CardsSounds {
         this.slideResetValue();
         this.cardsModeControll();
       } else {
-        this.playSound();
+        this.playSoundRemove();
         fireCard.classList.add("playSound");
         if (fireCard.classList.contains("playSound")) {
           this.cardsModeControll();
           fireSlide.classList.add("slide-volume-ligthModeActive");
           this.allCardsPause();
-          this.slideResetValue();
           this.slideVolume(fireSlide, fireCard);
           this.fireCardSounds();
         }
