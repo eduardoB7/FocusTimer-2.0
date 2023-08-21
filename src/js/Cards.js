@@ -110,6 +110,7 @@ export class Cards extends CardsSounds {
         if (florestCard.classList.contains("playSound")) {
           this.cardsModeControll();
           florestSlide.classList.add("slide-volume-ligthModeActive");
+          this.slideResetValue();
           this.slideVolume(florestSlide, florestCard);
           this.allCardsPause();
           this.florestCardSounds();
@@ -133,6 +134,7 @@ export class Cards extends CardsSounds {
           this.cardsModeControll();
           rainSlide.classList.add("slide-volume-ligthModeActive");
           this.allCardsPause();
+          this.slideResetValue();
           this.slideVolume(rainSlide, rainCard);
           this.rainCardSounds();
         }
@@ -155,6 +157,7 @@ export class Cards extends CardsSounds {
           this.cardsModeControll();
           coffeSlide.classList.add("slide-volume-ligthModeActive");
           this.allCardsPause();
+          this.slideResetValue();
           this.slideVolume(coffeSlide, coffeCard);
           this.coffeCardSounds();
         }
@@ -177,6 +180,7 @@ export class Cards extends CardsSounds {
           this.cardsModeControll();
           fireSlide.classList.add("slide-volume-ligthModeActive");
           this.allCardsPause();
+          this.slideResetValue();
           this.slideVolume(fireSlide, fireCard);
           this.fireCardSounds();
         }
